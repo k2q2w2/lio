@@ -1,0 +1,5 @@
+<launch>
+    <rosparam command="load" file="$(find lio)/config/parameter.yaml"/>
+    <node pkg="lio" type="lo" name="test_lo"/>
+    <remap from="lidar" to="/os1_cloud_node/points"/>
+</launch>
